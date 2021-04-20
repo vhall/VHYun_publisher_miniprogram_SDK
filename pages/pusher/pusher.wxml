@@ -1,0 +1,36 @@
+<!-- pages/index/index.wxml -->
+<view class="body">
+	<view class="box">
+		<live-pusher
+		 id="live-pusher"
+		 url="{{url}}"
+		 class="live-pusher"
+		 bindstatechange="statechange"
+		 bindnetstatus="netstatuschange"
+		 binderror="pusherror"
+		 bindbgmstart="bgmstart"
+		 bindbgmprogress="bgmprogress"
+		 bindbgmcomplete="bgmcomplete"
+		 autopush="{{autopush}}"
+		 enable-camera="{{enableCamera}}"
+		 enable-mic="{{enableMic}}"
+		/>
+	</view>
+	<view class="player-switch-box">
+		<button size="mini" bind:tap="start">start</button>
+		<button size="mini" bind:tap="stop">stop</button>
+		<button size="mini" bind:tap="switchCamera">switchCamera</button>
+		<button size="mini" bind:tap="snapshot">snapshot</button>
+		<button size="mini" bind:tap="toggleTorch">toggleTorch</button>
+		<button size="mini" bind:tap="setMICVolume">setMICVolume</button>
+		<button size="mini" bind:tap="startPreview">startPreview</button>
+		<button size="mini" bind:tap="stopPreview">stopPreview</button>
+		<button size="mini" bind:tap="testEnableMic">是否静音</button>
+	</view>
+	<view class="sliderbox" wx:if="{{showSlider}}">
+		设置麦克风音量
+		<slider bindchange="sliderchange" show-value step="10" />
+	</view>
+	<view class="mark" wx:if="{{singleAudio}}">当前为音频直播</view>
+</view>
+

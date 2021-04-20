@@ -1,0 +1,64 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+	<view class="item">
+		<span>appId</span>
+		<span class="input-span">
+			<input
+			 id="appId"
+			 bindinput="getinput"
+			 type="text"
+			 value="{{ appId }}"
+			/>
+		</span>
+	</view>
+	<view class="item">
+		<span>roomId</span>
+		<span class="input-span">
+			<input
+			 id="roomId"
+			 bindinput="getinput"
+			 type="text"
+			 value="{{ roomId }}"
+			/>
+		</span>
+	</view>
+	<view class="item">
+		<span>accountId</span>
+		<span class="input-span">
+			<input
+			 id="accountId"
+			 bindinput="getinput"
+			 type="text"
+			 value="{{ accountId }}"
+			/>
+		</span>
+	</view>
+	<view class="item">
+		<span>token</span>
+		<span class="input-span">
+			<input
+			 id="token"
+			 bindinput="getinput"
+			 type="text"
+			 value="{{ token }}"
+			/>
+		</span>
+	</view>
+	<view class="item radio-box">
+		<span>是否为音频推流</span>
+		<span class="input-span">
+			<radio-group class="radio-group" bindchange="getinput" id="singleAudio">
+				<radio class="radio" value="1">
+					<text>是</text>
+				</radio>
+				<radio class="radio" value="0" checked="{{true}}">
+					<text>否</text>
+				</radio>
+			</radio-group>
+		</span>
+	</view>
+	<view class="item">
+		<button bindtap="gotoPusher">开始推流</button>
+	</view>
+</view>
+

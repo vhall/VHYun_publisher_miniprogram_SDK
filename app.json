@@ -1,0 +1,14 @@
+{
+  "pages": ["pages/index/index", "pages/pusher/pusher"],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "微吼云小程序推流SDK-Demo"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "networkTimeout": {
+    "request": 5000
+  }
+}
